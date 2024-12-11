@@ -25,9 +25,11 @@ Before running the project, ensure that you have the following installed:
 
 ### Installation
 
-1. Clone the repository:
-1. Build
-1. Enter inputs
+1. Clone the repository
+1. dotnet restore
+1. dotnet build
+1. dotnet run
+
 
 ### Running the unit tests 
-1. Run the Tests in the MartianRobotTests Projects in Visual Studio.
+1. Run the Tests in the MartianRobotTests Projects in Visual Studio or use dotnet test
