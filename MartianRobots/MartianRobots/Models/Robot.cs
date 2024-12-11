@@ -26,5 +26,13 @@
         /// This means that the robot has gone out of bounds of the planet Mars.
         /// </summary>
         public bool IsLost { get; set; }
+
+        public Robot(int x, int y, char orientation)
+        {
+            X = x;
+            Y = y; 
+            Orientation = orientation;
+            IsLost = false;
+        }
     }
 }

@@ -22,5 +22,12 @@ namespace MartianRobots.Models
         /// <see cref="Robot.IsLost"/>
         /// </summary>
         public HashSet<(int, int)> Scents { get; } = [];
+
+        public Mars(int maxX,  int maxY)
+        {
+            MaxXCooridnate = maxX;
+            MaxYCoordiante = maxY;
+            Scents = new HashSet<(int, int)>();
+        }
     }
 }
