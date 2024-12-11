@@ -36,7 +36,7 @@ class Program
             !int.TryParse(positionInput[1], out int y) ||
             positionInput[2].Length != 1)
         {
-            Console.WriteLine("Invalid robot position input. Skipping...");
+            Console.WriteLine("Invalid robot position input. Exiting program.");
             return;
         }
 
@@ -47,7 +47,7 @@ class Program
         var instructions = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(instructions))
         {
-            Console.WriteLine("Invalid robot instructions input. Skipping...");
+            Console.WriteLine("Invalid robot instructions input. Exiting program.");
             return;
         }
 
