@@ -34,5 +34,25 @@
             Orientation = orientation;
             IsLost = false;
         }
+
+        /// <summary>
+        /// Updates the position of the robot.
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
+        public void UpdateCoordinates(int  x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        /// <summary>
+        /// Updates the direction that the robot is facing. 
+        /// </summary>
+        /// <param name="orientation">N, E, S, W</param>
+        public void UpdateOrientation(char orientation)
+        {
+            Orientation = orientation;
+        }
     }
 }
