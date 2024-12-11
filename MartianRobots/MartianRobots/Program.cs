@@ -54,10 +54,19 @@ class Program
         foreach (char instruction in instructions)
         {
             robot.ExecuteInstruction(instruction, mars);
-            if (robot.IsLost) break;
+            if (robot.IsLost)
+            {
+                break;
+            };
         }
 
         // Output final position
-        Console.WriteLine(robot);
+        var result = $"RESULT: {robot.X} {robot.Y} {robot.Orientation}";
+        if (robot.IsLost)
+        {
+            result = $"RESULT: {robot.X} {robot.Y} {robot.Orientation} LOST";
+        }
+
+        Console.WriteLine(result);
     }
 }
