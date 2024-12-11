@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MartianRobotsTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+570bb322605a3f317a138f92b3c0ea51ac4b5d26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+070a240f78f39f37dd67c09f9451ac835348c73d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MartianRobotsTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MartianRobotsTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
