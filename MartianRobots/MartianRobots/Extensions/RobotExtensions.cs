@@ -32,6 +32,11 @@ namespace MartianRobots.Extensions
 
         public static void MoveForward(this Robot robot, Mars mars)
         {
+            if (robot.IsLost)
+            {
+                return;
+            }
+
             int newX = robot.X;
             int newY = robot.Y;
 
@@ -48,7 +53,7 @@ namespace MartianRobots.Extensions
             }
 
             // Check if a scent exists at the current position and intended direction
-            if (mars.HasScent(newX, newY))
+            if (mars.HasScent(newX, newY) || mars.HasScent(robot.X, robot.Y))
             {
                 // If there's a scent, ignore the move
                 return;
@@ -57,7 +62,7 @@ namespace MartianRobots.Extensions
             // Check if the next position is out of bounds
             if (mars.IsOutOfBounds(newX, newY))
             {
-                mars.LeaveScent(newX, newX);
+                mars.LeaveScent(newX, newY);
                 robot.IsLost = true;
                 return;
             }

@@ -1,4 +1,5 @@
 using FluentAssertions;
+using FluentAssertions.Execution;
 using MartianRobots.Extensions;
 using MartianRobots.Models;
 
@@ -62,7 +63,7 @@ namespace MartianRobotsTests
             robot.X.Should().Be(0);
             robot.Y.Should().Be(3);
             robot.IsLost.Should().BeTrue();
-            mars.HasScent(0, 3).Should().BeTrue();
+            mars.HasScent(0, 4).Should().BeTrue();
         }
 
         [Fact]
@@ -131,20 +132,23 @@ namespace MartianRobotsTests
             }
 
             // Assert
-            robot1.X.Should().Be(1);
-            robot1.Y.Should().Be(1);
-            robot1.Orientation.Should().Be('E');
-            robot2.IsLost.Should().BeFalse();
+            using (new AssertionScope())
+            {
+                robot1.X.Should().Be(1);
+                robot1.Y.Should().Be(1);
+                robot1.Orientation.Should().Be('E');
+                robot1.IsLost.Should().BeFalse();
 
-            robot2.X.Should().Be(3);
-            robot2.Y.Should().Be(3);
-            robot2.Orientation.Should().Be('N');
-            robot2.IsLost.Should().BeTrue();
+                robot2.X.Should().Be(3);
+                robot2.Y.Should().Be(3);
+                robot2.Orientation.Should().Be('N');
+                robot2.IsLost.Should().BeTrue();
 
-            robot3.X.Should().Be(2);
-            robot3.Y.Should().Be(3);
-            robot3.Orientation.Should().Be('S');
-            robot2.IsLost.Should().BeFalse();
+                robot3.X.Should().Be(2);
+                robot3.Y.Should().Be(3);
+                robot3.Orientation.Should().Be('S');
+                robot3.IsLost.Should().BeFalse();
+            }
         }
     }
 }
